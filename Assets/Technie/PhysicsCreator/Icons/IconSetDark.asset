@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21afc6e733bd0444593d7901c4c9542c, type: 3}
+  m_Name: IconSetDark
+  m_EditorClassIdentifier: 
+  technieIcon: {fileID: 2800000, guid: daaa311e28e1c424c9b96613f005dbc4, type: 3}
+  addHullIcon: {fileID: 2800000, guid: ecc732b82664910428d13a9ab8d87134, type: 3}
+  errorIcon: {fileID: 2800000, guid: 07e27c5dc9153aa44b63cd8605bea4bd, type: 3}
+  deleteIcon: {fileID: 2800000, guid: ed626f3eb7ca82f4ca01ecc573abc52a, type: 3}
+  deleteCollidersIcon: {fileID: 2800000, guid: 932c171c86a08884587c1408a3709be7, type: 3}
+  paintOnIcon: {fileID: 2800000, guid: 1a45d9b420e15ec4987da6fa0e413854, type: 3}
+  paintOffIcon: {fileID: 2800000, guid: e605d6863e33297428559d65f14dfc75, type: 3}
+  triggerOnIcon: {fileID: 2800000, guid: d1bbb9bfbc023de42b9dbf51220042ce, type: 3}
+  triggerOffIcon: {fileID: 2800000, guid: c4d783bf900b5ea4bb46c64ff04f470b, type: 3}
+  isChildIcon: {fileID: 2800000, guid: d1bbb9bfbc023de42b9dbf51220042ce, type: 3}
+  nonChildIcon: {fileID: 2800000, guid: c4d783bf900b5ea4bb46c64ff04f470b, type: 3}
+  preciseBrushIcon: {fileID: 2800000, guid: 2086d90729c03c7449fbae2dc43056b1, type: 3}
+  smallBrushIcon: {fileID: 2800000, guid: 8578eea7eb4082f4f9ff18bf87107d2a, type: 3}
+  mediumBrushIcon: {fileID: 2800000, guid: e51d6c32dc56f6e4293b57b1d9b86b09, type: 3}
+  largeBrushIcon: {fileID: 2800000, guid: b61b6839c69606f4f9503a2fdfe1e2b9, type: 3}
+  pipetteIcon: {fileID: 2800000, guid: 0df339c140a1a764b807c428a6b8b752, type: 3}
+  hullVisibleIcon: {fileID: 2800000, guid: f46ba0102ad24ae4bbdc6caa4d3f80c4, type: 3}
+  hullInvisibleIcon: {fileID: 2800000, guid: f0fe965cb6372cd44bc6c34df40fd252, type: 3}
+  toolsIcons: {fileID: 2800000, guid: db421fa529f7aa44ea664bea709987d0, type: 3}
+  settingsIcon: {fileID: 2800000, guid: 8a5f5c6d00d9d684780e23f18c0331f3, type: 3}
+  defaultsIcon: {fileID: 2800000, guid: 8eca0ac9ccca8aa4b804df304bc55a8a, type: 3}
+  assetsIcon: {fileID: 2800000, guid: 5fed5fe8601acc64384ee0732ff98440, type: 3}
+  axisAlignedIcon: {fileID: 2800000, guid: 833ea652f359e0a4c8e0e989b588eee7, type: 3}
+  minimizeVolumeIcon: {fileID: 2800000, guid: 21ad19f23d6aadc4b98f7b8a7fb7c27c, type: 3}
+  alignFacesIcon: {fileID: 2800000, guid: 192988b1b9c6fec43af08cd940eca7bb, type: 3}
+  generateIcon: {fileID: 2800000, guid: 592c452b01d87ea42a285204d19f12f8, type: 3}
+  paintAllIcon: {fileID: 2800000, guid: 7de89902a2e02c740b6e45478b47b13e, type: 3}
+  paintNoneIcon: {fileID: 2800000, guid: 3f54b3dc4d3764b409c3b23d1f25e2e1, type: 3}
+  autoHullSettingsIcon: {fileID: 2800000, guid: 17ade7634afb4d04abc4087d35b2ec7c,
+    type: 3}
+  growIcon: {fileID: 2800000, guid: 8c75b07a2e30f77429194d161f15bfca, type: 3}
+  shrinkIcon: {fileID: 2800000, guid: edde214bf8d713443af2d787994458a3, type: 3}
+  invertIcon: {fileID: 2800000, guid: f597e4c53f962f84dbb9bcb214b1a886, type: 3}
+  otherIcon: {fileID: 2800000, guid: 9f494493416e82e4fbfd3b3779b4362e, type: 3}
+  hullsIcon: {fileID: 2800000, guid: 4c9c759cb2cbee14ba109578d882b560, type: 3}
+  boneIcon: {fileID: 2800000, guid: 9220ff55ba3b10d4581a1a077fdf4aa9, type: 3}
+  hullIcon: {fileID: 2800000, guid: 6d08bae156123b8478cb4812a3f09b23, type: 3}
+  colourBlobIcon: {fileID: 2800000, guid: 7bfa7e629449c16469609f8ef1baed52, type: 3}
+  hasRigidbodyIcon: {fileID: 2800000, guid: 4049aabb40170d942a1975ca2327c27c, type: 3}
+  isKinematicIcon: {fileID: 2800000, guid: e4a17d62ad3235d428d5939800e82052, type: 3}
+  hasJointIcon: {fileID: 2800000, guid: 6014ea924016a2a4baa762507236ac84, type: 3}
+  foldoutCollapsedIcon: {fileID: 2800000, guid: 2e975ef655bf5e3478da6c29fef19699,
+    type: 3}
+  foldoutExpandedIcon: {fileID: 2800000, guid: 2849b128514ae5a4ca3b5fce5850bb1b, type: 3}
+  actionsIcon: {fileID: 2800000, guid: f4d1626845679aa42994ff4e600a82a2, type: 3}
+  hierarchyIcon: {fileID: 2800000, guid: f1eb7846a8c5a514e8c5b027e832774a, type: 3}
+  propertiesIcon: {fileID: 2800000, guid: 4f46d598b6491e2478a1e6a08a0ef2b4, type: 3}
+  autoSetupIcon: {fileID: 2800000, guid: bcb4cb1f5ffdd43459848acf9d1edf8c, type: 3}
+  autoSetupIconSmall: {fileID: 2800000, guid: 74cce37b9573e84489a3208346a03c5f, type: 3}
+  remoteBodyDataIcon: {fileID: 2800000, guid: 9a22e23a9d3700749a6c1c6938054429, type: 3}
+  removeHullDataIcon: {fileID: 2800000, guid: 3f8447e9e78d18e4ba8920ee8bd0db6f, type: 3}
+  default12: {fileID: 2800000, guid: ef0c66492a320234c9f4abcb12ef6555, type: 3}
+  default14: {fileID: 2800000, guid: 11c38986fabec6342b320c783c3dc7fb, type: 3}
+  default16: {fileID: 2800000, guid: 07a6104d2f28ebe4580125004639ac14, type: 3}
+  default18: {fileID: 2800000, guid: 39a014e666d1d6e469250ec033765a1b, type: 3}
+  default22: {fileID: 2800000, guid: cd2b738bbfad9d149988d4bd8102e5b2, type: 3}
+  default24: {fileID: 2800000, guid: 2b97225cf90217b418c95337a5de54d4, type: 3}
+  default32: {fileID: 2800000, guid: a58907d980da1664493213791f73a8be, type: 3}

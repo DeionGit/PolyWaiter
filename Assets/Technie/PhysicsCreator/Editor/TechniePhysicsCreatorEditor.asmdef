@@ -1,0 +1,11 @@
+{
+    "name": "TechniePhysicsCreatorEditor",
+    "references": [
+        "TechniePhysicsCreator"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+	"allowUnsafeCode": true
+}
