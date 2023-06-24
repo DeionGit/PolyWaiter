@@ -19,9 +19,12 @@ public class Bebida : MonoBehaviour
     public GameObject LiquidObject;
     void Start()
     {
+
+        #region Referencias de liquido y colliders
         vasoCollider = GetComponent<Collider>();
         LiquidObject = transform.GetChild(0).gameObject;
         InsideLiquid = GetComponentInChildren<Liquid>();
+        #endregion 
     }
 
     // Update is called once per frame
