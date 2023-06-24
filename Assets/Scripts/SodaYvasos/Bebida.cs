@@ -19,24 +19,22 @@ public class Bebida : MonoBehaviour
     public GameObject LiquidObject;
     void Start()
     {
-
         #region Referencias de liquido y colliders
         vasoCollider = GetComponent<Collider>();
         LiquidObject = transform.GetChild(0).gameObject;
         InsideLiquid = GetComponentInChildren<Liquid>();
         #endregion 
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(testingKey))
-        {
-            ColocarEnbandeja();
-        }
+        
     }
 
-
+    #region Features futuras NO EN LA BETA, APARTAR
     public void ColocarEnbandeja()
     {
         if (HayBandeja())
@@ -49,6 +47,7 @@ public class Bebida : MonoBehaviour
             transform.parent = hit.transform;
         }
     }
+
     public void QuitarDeBandeja()
     {
         Physics.IgnoreCollision(vasoCollider, bandejaCollider, false);
@@ -56,13 +55,16 @@ public class Bebida : MonoBehaviour
     }
     bool HayBandeja()
     {
-        if (Physics.Raycast(transform.position, -transform.up,rayToPos, LayersToIgnore))
+        if (Physics.Raycast(transform.position, -transform.up, rayToPos, LayersToIgnore))
         {
             return true;
         }
         else return false;
- 
+
     }
+    #endregion
+
+
     private void OnDrawGizmos()
     {
         Vector3 to = new Vector3(0, rayToPos, 0);
