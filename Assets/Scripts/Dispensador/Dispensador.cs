@@ -47,21 +47,26 @@ public class Dispensador : MonoBehaviour
     {
         Surtidor surtidor = GetSurtidorByName(SodaName);
         
-        if (Physics.Raycast(surtidor.transform.position, surtidor.transform.forward, out RaycastHit hit, layerToDetect))
+        if (Physics.Raycast(surtidor.transform.position, surtidor.transform.forward, out RaycastHit hit))
         {
             // AQUI VAN LAS PARTICULAS!!! 
-          if (hit.transform.CompareTag("Liquid"))
-          {
-                Liquid liquid = hit.transform.GetComponent<Liquid>();
+            if (hit.transform.CompareTag("Glass"))
+            {
+                Liquid liquid = hit.transform.GetComponentInChildren<Liquid>();
 
                 liquid.CrearBebida(surtidor.bebida, surtidor.FoamColor, surtidor.SodaColor, surtidor.RimColor);
-                
-          }
+
+            }
+            else Debug.Log(hit.transform.tag);
         }
     }
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DispensarSoda("Red");
+            Debug.Log("Patata");
+        }
     }
 }

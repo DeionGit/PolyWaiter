@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using DG.Tweening;
 
 [ExecuteInEditMode]
 public class Liquid : MonoBehaviour
@@ -200,6 +200,10 @@ public class Liquid : MonoBehaviour
         return lowestVert.y;
     }
 
+    public void SetShapeAmmont(float ammount)
+    {
+        CompensateShapeAmount = ammount;
+    }
     #region Añadir variables de bebida
     public void CrearBebida(TipoBebida bebida, Color foam, Color soda, Color rim)
     {
@@ -211,6 +215,8 @@ public class Liquid : MonoBehaviour
         mat.SetColor("_Rim_Color", rim);
 
 
+        DOVirtual.Float(0, 2.5f, 3f, v => SetShapeAmmont(v));
+        //Cuando acana de llenar la bebida debe permitir poder volver a agarrarla
 
     }
     #endregion

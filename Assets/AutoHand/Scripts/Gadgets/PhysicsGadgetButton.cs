@@ -37,6 +37,7 @@ namespace Autohand{
 
             if (pressed && lockOnPressed && value + threshold < pressedValue)
                 transform.localPosition = pressedPos;
+
         }
 
 
