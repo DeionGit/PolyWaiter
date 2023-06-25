@@ -28,7 +28,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2999
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -123,7 +123,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
-    - _QueueOffset: 0
+    - _QueueOffset: -1
     - _ReceiveShadows: 1
     - _Rim_Power: 4.25
     - _Smoothness: 0.5
@@ -137,11 +137,11 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BottomColor: {r: 0.009433985, g: 0.0040431367, b: 0, a: 1}
+    - _BottomColor: {r: 0.01886791, g: 0.003851955, b: 0.0009611939, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FillAmmount: {r: 0, g: 0.4, b: 0, a: 0}
-    - _FillAmount: {r: 0, g: -0.51099986, b: 0.07148647, a: 0}
+    - _FillAmount: {r: 0, g: -0.4111097, b: 0.07148647, a: 0}
     - _FoamColor: {r: 0.3018868, g: 0.1931108, b: 0.14097543, a: 1}
     - _Rim_Color: {r: 0.3962264, g: 0.2760251, b: 0.13643645, a: 1}
     - _SideColor: {r: 0.0028924954, g: 0.6012408, b: 0.6132076, a: 1}
