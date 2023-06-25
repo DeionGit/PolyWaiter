@@ -17,6 +17,8 @@ public class Bebida : MonoBehaviour
     [Header("Liquido del vaso")]
     public Liquid InsideLiquid;
     public GameObject LiquidObject;
+
+    TipoBebida tipoBebida;
     void Start()
     {
         #region Referencias de liquido y colliders
@@ -28,10 +30,10 @@ public class Bebida : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+
     }
 
     #region Features futuras NO EN LA BETA, APARTAR
@@ -67,11 +69,18 @@ public class Bebida : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Vector3 to = new Vector3(0, rayToPos, 0);
 
     }
 
-    
+    public void SetTipoBebida(TipoBebida bebida)
+    {
+        tipoBebida = bebida;
+    }
+
+    TipoBebida GetTipoBebida()
+    {
+        return tipoBebida;
+    }
 
 }
 public enum TipoBebida

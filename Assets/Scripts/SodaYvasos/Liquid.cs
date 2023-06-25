@@ -5,6 +5,8 @@ using UnityEngine;
 //[ExecuteInEditMode]
 public class Liquid : MonoBehaviour
 {
+    Bebida vaso;
+
     public enum UpdateMode { Normal, UnscaledTime }
     public UpdateMode updateMode;
 
@@ -42,6 +44,7 @@ public class Liquid : MonoBehaviour
     void Start()
     {
         GetMeshAndRend();
+        vaso = GetComponentInParent<Bebida>();
     }
 
     private void OnValidate()
@@ -195,4 +198,19 @@ public class Liquid : MonoBehaviour
         }
         return lowestVert.y;
     }
+
+    #region Añadir variables de bebida
+    public void CrearBebida(TipoBebida bebida, Color foam, Color soda, Color rim)
+    {
+        vaso.SetTipoBebida(bebida);
+        Material mat = rend.material;
+        mat.SetColor("_TopColor", foam);
+        mat.SetColor("_FoamColor", foam);
+        mat.SetColor("_BottomColor", soda);
+        mat.SetColor("_Rim_Color", rim);
+
+
+
+    }
+    #endregion
 }

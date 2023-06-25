@@ -10,6 +10,7 @@ public class Dispensador : MonoBehaviour
         public string sodaName;
         public Transform transform;
 
+        public TipoBebida bebida;
         public Color FoamColor;
         public Color SodaColor;
         public Color RimColor;
