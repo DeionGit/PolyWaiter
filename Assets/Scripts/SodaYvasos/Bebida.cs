@@ -55,7 +55,7 @@ public class Bebida : MonoBehaviour
     }
     bool HayBandeja()
     {
-        if (Physics.Raycast(transform.position, -transform.up, rayToPos, LayersToIgnore))
+        if (Physics.Raycast(transform.position, -transform.up, rayToPos, LayersToDetect))
         {
             return true;
         }

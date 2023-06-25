@@ -12,6 +12,7 @@ public class Dispensador : MonoBehaviour
 
         public Color FoamColor;
         public Color SodaColor;
+        public Color RimColor;
     }
 
     public List<Surtidor> surtidores;
@@ -43,11 +44,19 @@ public class Dispensador : MonoBehaviour
         
         if (Physics.Raycast(surtidor.transform.position, surtidor.transform.forward, out RaycastHit hit, layerToDetect))
         {
-         
-         
-         
+            // AQUI VAN LAS PARTICULAS!!! 
+          if (hit.transform.CompareTag("Liquid"))
+          {
+                Liquid liquid = hit.transform.GetComponent<Liquid>();
+
+                Material liquidMat = hit.transform.GetComponent<MeshRenderer>().material;
+
+                //AQUI VA UNA FUNCION QUE RECOJA ESTAS VARIABLES Y CREE EL REFRESCO
+                
+          }
         }
     }
+
     void Update()
     {
         
