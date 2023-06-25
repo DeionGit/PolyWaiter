@@ -782,7 +782,7 @@ namespace Autohand {
 
         private void OnDrawGizmosSelected() {
             var radius = reachDistance;
-            Gizmos.DrawWireSphere(palmTransform.position + palmTransform.forward * radius, radius);
+            //Gizmos.DrawWireSphere(palmTransform.position + palmTransform.forward * radius, radius);
         }
 
 

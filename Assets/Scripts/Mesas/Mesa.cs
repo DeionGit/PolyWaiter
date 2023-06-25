@@ -9,6 +9,7 @@ public class Mesa : MonoBehaviour
     [SerializeField] Transform entradaMesa1;
     [SerializeField] Transform entradaMesa2;
     
+    
     void Start()
     {
         
