@@ -143,8 +143,8 @@ Material:
     - _FillAmmount: {r: 0, g: 0.4, b: 0, a: 0}
     - _FillAmount: {r: 0, g: -0.37128273, b: 0.07479191, a: 0}
     - _FoamColor: {r: 0.3018868, g: 0.1931108, b: 0.14097543, a: 1}
-    - _Rim_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Rim_Color: {r: 0.3962264, g: 0.2760251, b: 0.13643645, a: 1}
     - _SideColor: {r: 0.0028924954, g: 0.6012408, b: 0.6132076, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _TopColor: {r: 0.021, g: 0.0105, b: 0, a: 1}
+    - _TopColor: {r: 0.3019608, g: 0.19215687, b: 0.14117648, a: 1}
   m_BuildTextureStacks: []

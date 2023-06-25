@@ -8,7 +8,7 @@ public class Bebida : MonoBehaviour
 
 
     [SerializeField] float rayToPos = 0.1f;
-    [SerializeField] LayerMask LayersToIgnore;
+    [SerializeField] LayerMask LayersToDetect;
 
     bool colocadoEnBandeja = false;
     Collider vasoCollider;
