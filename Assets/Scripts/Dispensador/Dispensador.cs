@@ -24,7 +24,7 @@ public class Dispensador : MonoBehaviour
         
     }
 
-    public Surtidor GetSurtidor(string sodaName)
+    public Surtidor GetSurtidorByName(string sodaName)
     {
         foreach (Surtidor surtidor in surtidores)
         {
@@ -40,7 +40,7 @@ public class Dispensador : MonoBehaviour
 
     public void DispensarSoda(string SodaName)
     {
-        Surtidor surtidor = GetSurtidor(SodaName);
+        Surtidor surtidor = GetSurtidorByName(SodaName);
         
         if (Physics.Raycast(surtidor.transform.position, surtidor.transform.forward, out RaycastHit hit, layerToDetect))
         {
