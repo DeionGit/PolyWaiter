@@ -17,13 +17,27 @@ public class Dispensador : MonoBehaviour
         public Color SodaColor;
     
         public Color RimColor;
-       
+
+        public ParticleSystem particulasDispensador;
+
+        bool canUse = true;
+
+        public IEnumerator Dispensando()
+        {
+            canUse = false;
+            yield return new WaitForSeconds(3f);
+            canUse = true;
+
+        }
+        
+        public bool surtidorDisponible()
+        {
+            return canUse;
+        }
     }
 
     public List<Surtidor> surtidores;
 
-
-    [SerializeField] LayerMask layerToDetect;
     void Start()
     {
         
@@ -46,19 +60,23 @@ public class Dispensador : MonoBehaviour
     public void DispensarSoda(string SodaName)
     {
         Surtidor surtidor = GetSurtidorByName(SodaName);
-        
-        if (Physics.Raycast(surtidor.transform.position, surtidor.transform.forward, out RaycastHit hit))
+        if (surtidor.surtidorDisponible())
         {
-            // AQUI VAN LAS PARTICULAS!!! 
-            if (hit.transform.CompareTag("Glass"))
+            StartCoroutine(surtidor.Dispensando());
+            if (Physics.Raycast(surtidor.transform.position, surtidor.transform.forward, out RaycastHit hit))
             {
-                Liquid liquid = hit.transform.GetComponentInChildren<Liquid>();
+                // AQUI VAN LAS PARTICULAS!!! 
+                if (hit.transform.CompareTag("Glass"))
+                {
+                    Liquid liquid = hit.transform.GetComponentInChildren<Liquid>();
 
-                liquid.CrearBebida(surtidor.bebida, surtidor.FoamColor, surtidor.SodaColor, surtidor.RimColor);
+                    liquid.CrearBebida(surtidor.bebida, surtidor.FoamColor, surtidor.SodaColor, surtidor.RimColor);
 
+                }
+                else Debug.Log(hit.transform.tag);
             }
-            else Debug.Log(hit.transform.tag);
         }
+        
     }
 
     void Update()
@@ -66,7 +84,7 @@ public class Dispensador : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             DispensarSoda("Red");
-            Debug.Log("Patata");
+
         }
     }
 }
