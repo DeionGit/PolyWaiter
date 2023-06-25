@@ -11,9 +11,13 @@ public class Dispensador : MonoBehaviour
         public Transform transform;
 
         public TipoBebida bebida;
+        [ColorUsageAttribute(true, true)]
         public Color FoamColor;
+        [ColorUsageAttribute(true, true)]
         public Color SodaColor;
+    
         public Color RimColor;
+       
     }
 
     public List<Surtidor> surtidores;
@@ -50,9 +54,7 @@ public class Dispensador : MonoBehaviour
           {
                 Liquid liquid = hit.transform.GetComponent<Liquid>();
 
-                Material liquidMat = hit.transform.GetComponent<MeshRenderer>().material;
-
-                //AQUI VA UNA FUNCION QUE RECOJA ESTAS VARIABLES Y CREE EL REFRESCO
+                liquid.CrearBebida(surtidor.bebida, surtidor.FoamColor, surtidor.SodaColor, surtidor.RimColor);
                 
           }
         }
