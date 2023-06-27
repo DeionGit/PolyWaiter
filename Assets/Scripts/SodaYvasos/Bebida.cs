@@ -89,7 +89,7 @@ public enum TipoBebida
     SodaGreen = 0,
     SodaBlue = 1,
     SodaRed = 2,
-    SodaPruple = 4,
-    SodaCian = 5,
-    SodaOrange = 6
+    SodaPruple = 3,
+    SodaCian = 4,
+    SodaOrange = 5
 }

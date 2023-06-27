@@ -22766,6 +22766,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9536242, guid: 6f822b7cef012994fb62ed7bf1298e83, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f822b7cef012994fb62ed7bf1298e83, type: 3}
 --- !u!1 &818844164
@@ -71060,6 +71064,7 @@ GameObject:
   - component: {fileID: 6006541596818931407}
   - component: {fileID: 1958341744704493420}
   - component: {fileID: 7150265012321582840}
+  - component: {fileID: 7150265012321582841}
   m_Layer: 0
   m_Name: SM_Prop_OrderPaper_3
   m_TagString: Untagged
@@ -75361,6 +75366,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7150265012321582841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6427852848645677997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b5b6d213b03ee342a61a2c92a76fa10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListaDeComandas: []
 --- !u!23 &7156554555183448802
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -83306,21 +83324,21 @@ MonoBehaviour:
     particulasDispensador: {fileID: 1395002623}
   - sodaName: Purple
     transform: {fileID: 707152752}
-    bebida: 4
+    bebida: 3
     FoamColor: {r: 0, g: 0, b: 0, a: 0}
     SodaColor: {r: 0, g: 0, b: 0, a: 0}
     RimColor: {r: 0, g: 0, b: 0, a: 0}
     particulasDispensador: {fileID: 707152754}
   - sodaName: Cian
     transform: {fileID: 619050732}
-    bebida: 5
+    bebida: 4
     FoamColor: {r: 0, g: 0, b: 0, a: 0}
     SodaColor: {r: 0, g: 0, b: 0, a: 0}
     RimColor: {r: 0, g: 0, b: 0, a: 0}
     particulasDispensador: {fileID: 619050733}
   - sodaName: Orange
     transform: {fileID: 906553748}
-    bebida: 6
+    bebida: 5
     FoamColor: {r: 0, g: 0, b: 0, a: 0}
     SodaColor: {r: 0, g: 0, b: 0, a: 0}
     RimColor: {r: 0, g: 0, b: 0, a: 0}
