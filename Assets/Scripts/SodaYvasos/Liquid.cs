@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-[ExecuteInEditMode]
+
 public class Liquid : MonoBehaviour
 {
     Bebida vaso;
@@ -26,7 +26,7 @@ public class Liquid : MonoBehaviour
     [SerializeField]
     Mesh mesh;
     [SerializeField]
-    Renderer rend;
+    MeshRenderer rend;
     Vector3 pos;
     Vector3 lastPos;
     Vector3 velocity;
@@ -65,7 +65,7 @@ public class Liquid : MonoBehaviour
         }
         if (rend == null)
         {
-            rend = GetComponent<Renderer>();
+            rend = GetComponent<MeshRenderer>();
         }
     }
     void Update()
@@ -114,8 +114,8 @@ public class Liquid : MonoBehaviour
         }
 
         // send it to the shader
-        rend.sharedMaterial.SetFloat("_WobbleX", wobbleAmountX);
-        rend.sharedMaterial.SetFloat("_WobbleZ", wobbleAmountZ);
+        rend.material.SetFloat("_WobbleX", wobbleAmountX);
+        rend.material.SetFloat("_WobbleZ", wobbleAmountZ);
 
         // set fill amount
         UpdatePos(deltaTime);
@@ -147,7 +147,7 @@ public class Liquid : MonoBehaviour
         {
             pos = worldPos - transform.position - new Vector3(0, fillAmount, 0);
         }
-        rend.sharedMaterial.SetVector("_FillAmount", pos);
+        rend.material.SetVector("_FillAmount", pos);
     }
 
     //https://forum.unity.com/threads/manually-calculate-angular-velocity-of-gameobject.289462/#post-4302796
