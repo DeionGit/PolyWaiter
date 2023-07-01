@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Autohand;
+using UnityEngine;
 
 public class Bebida : MonoBehaviour
 {
@@ -19,6 +17,10 @@ public class Bebida : MonoBehaviour
     public Liquid InsideLiquid;
     public GameObject LiquidObject;
 
+    [Header("Spawner Info")]
+    VasoSpawner vasoSpawn;
+    Grabbable grabbable;
+    [Space(20)]
     TipoBebida tipoBebida;
     void Start()
     {
@@ -26,11 +28,14 @@ public class Bebida : MonoBehaviour
         vasoCollider = GetComponent<Collider>();
         LiquidObject = transform.GetChild(0).gameObject;
         InsideLiquid = GetComponentInChildren<Liquid>();
+        LiquidObject.SetActive(false);
         #endregion 
 
+        vasoSpawn = FindObjectOfType<VasoSpawner>();
 
+        grabbable = GetComponent<Grabbable>();
+        
     }
-
 
     void Update()
     {
@@ -78,18 +83,29 @@ public class Bebida : MonoBehaviour
         tipoBebida = bebida;
     }
 
-    TipoBebida GetTipoBebida()
+    public TipoBebida GetTipoBebida()
     {
         return tipoBebida;
     }
 
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("Finish"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
 public enum TipoBebida
 {
+
     SodaGreen = 0,
     SodaBlue = 1,
     SodaRed = 2,
     SodaPruple = 3,
     SodaCian = 4,
-    SodaOrange = 5
+    SodaOrange = 5,
+    Completa = default
+
 }

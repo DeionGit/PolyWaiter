@@ -38,11 +38,7 @@ public class Dispensador : MonoBehaviour
 
     public List<Surtidor> surtidores;
 
-    void Start()
-    {
-        
-    }
-
+   
     public Surtidor GetSurtidorByName(string sodaName)
     {
         foreach (Surtidor surtidor in surtidores)
@@ -65,9 +61,11 @@ public class Dispensador : MonoBehaviour
             StartCoroutine(surtidor.Dispensando());
             if (Physics.Raycast(surtidor.transform.position, surtidor.transform.forward, out RaycastHit hit))
             {
-                // AQUI VAN LAS PARTICULAS!!! 
+                surtidor.particulasDispensador.Play();
+
                 if (hit.transform.CompareTag("Glass"))
                 {
+                    hit.transform.GetChild(0).gameObject.SetActive(true);
                     Liquid liquid = hit.transform.GetComponentInChildren<Liquid>();
 
                     liquid.CrearBebida(surtidor.bebida, surtidor.FoamColor, surtidor.SodaColor, surtidor.RimColor);
@@ -79,12 +77,4 @@ public class Dispensador : MonoBehaviour
         
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DispensarSoda("Red");
-
-        }
-    }
 }

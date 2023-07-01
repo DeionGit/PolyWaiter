@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class Liquid : MonoBehaviour
 {
-    Bebida vaso;
+    [SerializeField] Bebida vaso;
 
     public enum UpdateMode { Normal, UnscaledTime }
     public UpdateMode updateMode;
@@ -42,10 +42,14 @@ public class Liquid : MonoBehaviour
     Vector3 comp;
 
     // Use this for initialization
+    private void Awake()
+    {
+        vaso = GetComponentInParent<Bebida>();
+
+    }
     void Start()
     {
         GetMeshAndRend();
-        vaso = GetComponentInParent<Bebida>();
     }
 
     private void OnValidate()
