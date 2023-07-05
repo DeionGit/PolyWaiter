@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     bool serviceOpen = false;
 
-    float comandaSpawnTime = 7f;
+    float comandaSpawnTime = 12f;
 
     [SerializeField] TextMeshPro textScore;
     [SerializeField] string preScore;
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
                 if (!mesasLocal[i].GetMesaOcupada())
                 {
                     mesasLocal[i].CrearComandaParaLaMesa();
-                    
+                    MoreDificult();
                     break;
                 }
             }
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
     }
     public void MoreDificult()
     {
-        if (comandaSpawnTime > 1.5f) comandaSpawnTime -= 0.07f;
+        if (comandaSpawnTime > 6.5f) comandaSpawnTime -= 0.07f;
     }
     public void Set1MoreScore()
     {

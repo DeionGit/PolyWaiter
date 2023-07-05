@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using ComandaSystem;
+using Autohand;
 public class PapelComanda : MonoBehaviour
 {
     [SerializeField] string preNumeroMesa;
@@ -10,8 +11,17 @@ public class PapelComanda : MonoBehaviour
     [SerializeField] string prebebida;
     [SerializeField] TextMeshPro[] bebidas;
 
+    Grabbable grabbable;
+    Rigidbody rb;
+    Collider col;
 
-    
+    private void Awake()
+    {
+        grabbable = GetComponent<Grabbable>();
+        rb = GetComponent<Rigidbody>();
+        col = GetComponent<Collider>();
+    }
+
     public void SetComandaInfo(Comanda comanda)
     {
         comanda.SetPapelComanda(this);
@@ -30,7 +40,12 @@ public class PapelComanda : MonoBehaviour
         }
     }
 
-   
+    public void MakeItGrabbable(bool active)
+    {
+        grabbable.enabled = active;
+        rb.isKinematic = !active;
+        col.enabled = active;
+    }
 
     public void TacharBebidaEntregada(int listPosition)
     {
