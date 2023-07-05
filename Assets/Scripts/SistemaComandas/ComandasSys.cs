@@ -9,6 +9,8 @@ namespace ComandaSystem
 
         public List<TipoBebida> comandaDeBebidas = new List<TipoBebida>();
 
+        PapelComanda papelComanda;
+
         public int numeroDeMesa;
         public Comanda()
         {
@@ -21,12 +23,30 @@ namespace ComandaSystem
                 Debug.Log("Cliente " + i + " beberá una " + comandaDeBebidas[i]);
             }
         }
-
+        public void SetPapelComanda(PapelComanda papel)
+        {
+            papelComanda = papel;
+        }
         public void BebidaEntregada(TipoBebida tipoBebida)
         {
+            papelComanda.TacharBebidaEntregada( PosicionDeBebida(tipoBebida) );
+
             comandaDeBebidas.Remove(tipoBebida);
         }
-        
+        public int PosicionDeBebida(TipoBebida tipoBebida)
+        {
+            for (int i = 0; i < comandaDeBebidas.Count; i++)
+            {
+                if (comandaDeBebidas[i] == tipoBebida)
+                {
+                    return i;
+                    break;
+                }
+            }
+            return 666;
+
+        }
+
     }
     public class ComandasSys : MonoBehaviour
     {    
@@ -69,18 +89,7 @@ namespace ComandaSystem
         }
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                ListaDeComandas.Add(new Comanda());
-                Debug.Log("Hay " + ListaDeComandas.Count + " comandas");
-            }
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                foreach (TipoBebida bebida in ListaDeComandas[1].comandaDeBebidas)
-                {
-                    Debug.Log(bebida.ToString());
-                }
-            }
+         
         }
     }
 
