@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 
     bool serviceOpen = false;
 
-    float comandaSpawnTime = 12f;
+    [Header("Time To Spawn tables")]
+    [SerializeField] float comandaSpawnTime = 12f;
 
     [SerializeField] TextMeshPro textScore;
     [SerializeField] string preScore;
@@ -35,14 +36,17 @@ public class GameManager : MonoBehaviour
     
     public void StartGame()
     {
-        StartCoroutine(OcuparMesaAleatorio());
+
+        if(!serviceOpen) StartCoroutine(OcuparMesaAleatorio());
+
     }
     IEnumerator OcuparMesaAleatorio()
     {
         serviceOpen = true;
         int randomComanda = Random.Range(0, 7);
+        Debug.Log("LO INTENTA");
         yield return new WaitForSeconds(comandaSpawnTime);
-
+        
         if (randomComanda >= 5)
         {
             for (int i = 0; i < mesasLocal.Length; i++)

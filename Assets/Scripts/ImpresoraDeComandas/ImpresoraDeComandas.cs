@@ -21,10 +21,6 @@ public class ImpresoraDeComandas : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    private void Update()
-    {
-       
-    }
     public void ImprimirPapelComanda(Comanda comanda)
     {
         GameObject papelComanda = Instantiate(papelComandaPrefab, spawnPosComanda.position,spawnPosComanda.rotation, spawnPosComanda);

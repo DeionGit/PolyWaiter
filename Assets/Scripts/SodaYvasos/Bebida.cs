@@ -100,12 +100,12 @@ public class Bebida : MonoBehaviour
 public enum TipoBebida
 {
 
-    SodaGreen = 0,
-    SodaBlue = 1,
-    SodaRed = 2,
-    SodaPruple = 3,
-    SodaCian = 4,
-    SodaOrange = 5,
+    SodaGreen = 1,
+    SodaBlue = 2,
+    SodaRed = 3,
+    SodaPruple = 4,
+    SodaCian = 5,
+    SodaOrange = 6,
     Completa = default
 
 }

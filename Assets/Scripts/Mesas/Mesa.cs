@@ -11,28 +11,20 @@ public class Mesa : MonoBehaviour
     [SerializeField] int numeroMesa;
 
     [SerializeField] GameObject visualNPCs;
-    private void Awake()
-    {
-       
-
-    }
-    void Start()
-    {
-        
-    }
+   
     public void CrearComandaParaLaMesa()
     {
+        Debug.Log("LO CONSIGUE");
         comandaMesa = new Comanda();
         comandaMesa.numeroDeMesa = numeroMesa;
         ComandasSys.instance.AddComandaToList(comandaMesa);
+        ImpresoraDeComandas.instance.ImprimirPapelComanda(comandaMesa);
 
         SetMesaVisual(true);
-        SodaPanel.instance.SetMesaVisualComanda(comandaMesa, true);
     }
     public void CerrarComandaDeLaMesa()
     {
         ComandasSys.instance.FinishComandaToList(comandaMesa);
-        SodaPanel.instance.SetMesaVisualComanda(comandaMesa, false);
 
         GameManager.instance.MoreDificult();
 

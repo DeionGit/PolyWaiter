@@ -18,7 +18,7 @@ namespace ComandaSystem
 
             for (int i = 0; i < comandaDeBebidas.Capacity; i++)
             {
-                int randomBebida = Random.Range(0, 6);
+                int randomBebida = Random.Range(1, 7);
                 comandaDeBebidas.Add((TipoBebida)randomBebida);
                 Debug.Log("Cliente " + i + " beberá una " + comandaDeBebidas[i]);
             }

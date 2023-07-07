@@ -27,16 +27,20 @@ public class PapelComanda : MonoBehaviour
         comanda.SetPapelComanda(this);
         numeroMesa.text = preNumeroMesa + comanda.numeroDeMesa;
 
-        for (int i = 0; i < comanda.comandaDeBebidas.Count; i++)
+        for (int i = 0; i < bebidas.Length; i++)
         {
-            if (comanda.comandaDeBebidas[i] != default)
+            if (i < comanda.comandaDeBebidas.Count)
             {
-                bebidas[i].text = prebebida + comanda.comandaDeBebidas[i].ToString();
-            }else
+                if (comanda.comandaDeBebidas[i] != default)
+                {
+                    bebidas[i].text = prebebida + comanda.comandaDeBebidas[i].ToString();
+                }
+                
+            }
+            else
             {
                 bebidas[i].text = "";
             }
-
         }
     }
 
